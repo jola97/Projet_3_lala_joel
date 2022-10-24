@@ -1,0 +1,20 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "mon_projet_3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./sass/style.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jola97/Projet_3_lala_joel.git"
+  },
+  "author": "lala_joel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jola97/Projet_3_lala_joel/issues"
+  },
+  "homepage": "https://github.com/jola97/Projet_3_lala_joel#readme"
+}
