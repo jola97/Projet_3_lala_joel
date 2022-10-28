@@ -75,7 +75,8 @@ main{
         background-color: #fafafa;
         border-radius: 10px;
         margin-bottom: 30px;
-        display: flex;
+        /*display: flex; */
+        text-align: left;
         padding: 25px 20px 25px 0;
         width: 95%;
         box-shadow: 0px 5px 10px #bdbdbd;
@@ -113,23 +114,29 @@ main{
         margin-left: 25px;
         margin-right: 25px;
         line-height: 0;
-        
         &__label{
-            border: 1px solid #CCFFE5;
-            background-color: #CCFFE5;
+            border: 1px solid transparent;
+            border-radius: 3px 3px;
+            background-color: $color-tertiary;
+            color: #077754;
+            width: 79px;
+            height: 24px;
+            padding: 15px 10px 15px 10px;
+            position: absolute;
+            right: 45px;
         }
         &__img{
             width: 100%;
-            border-top-right-radius: 20px;
-            border-top-left-radius: 20px;
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
             object-fit: cover;
             object-position: center 62%;
             max-height: 200px;
         }
         &__description{
             background-color: #ffff;
-            border-bottom-right-radius: 20px;
-            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 15px;
+            border-bottom-left-radius: 15px;
             display: flex;
             justify-content: space-between;
             flex-direction: row;
@@ -137,10 +144,16 @@ main{
             line-height: .5;
             padding: 0 30px 25px 19px;
             box-shadow: 0px 1px 17px #bdbdbd;
+
             &__ico{
                 font-size: 28px;
                 &:hover{
                     cursor: pointer;
+                    font-weight: 900;
+                    background: linear-gradient(to top, $color-secondary, $color-primary);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
                 }
             }
         }

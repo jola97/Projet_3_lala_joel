@@ -104,7 +104,8 @@ main {
   background-color: #fafafa;
   border-radius: 10px;
   margin-bottom: 30px;
-  display: flex;
+  /*display: flex; */
+  text-align: left;
   padding: 25px 20px 25px 0;
   width: 95%;
   box-shadow: 0px 5px 10px #bdbdbd;
@@ -131,21 +132,28 @@ main {
   line-height: 0;
 }
 .restaurants__box__label {
-  border: 1px solid #CCFFE5;
-  background-color: #CCFFE5;
+  border: 1px solid transparent;
+  border-radius: 3px 3px;
+  background-color: #99E2D0;
+  color: #077754;
+  width: 79px;
+  height: 24px;
+  padding: 15px 10px 15px 10px;
+  position: absolute;
+  right: 45px;
 }
 .restaurants__box__img {
   width: 100%;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
   object-fit: cover;
   object-position: center 62%;
   max-height: 200px;
 }
 .restaurants__box__description {
   background-color: white;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -159,6 +167,11 @@ main {
 }
 .restaurants__box__description__ico:hover {
   cursor: pointer;
+  font-weight: 900;
+  background: linear-gradient(to top, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */
