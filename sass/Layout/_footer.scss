@@ -3,8 +3,8 @@
     color: #ffff;
     padding: 15px 0 20px 25px;
     
-    p img{
-        width: 100px;
+    p{
+        font-family: Shrikhand, sans-serif;
         color: #ffff;
     }
     ul{
@@ -13,6 +13,10 @@
         line-height: 1.5;
         li{
             font-weight: bold;
+        }
+        a{
+            text-decoration: none;
+            color: #ffff;
         }
     }
 }

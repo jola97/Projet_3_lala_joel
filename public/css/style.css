@@ -3,12 +3,21 @@
   box-sizing: border-box; /*définit la façon dont la hauteur et la largeur totale d'un élément est calculé*/
 }
 
-.logo__heading {
-  border: 1px solid transparent;
-  text-align: center;
+.heading {
+  display: flex;
+  justify-content: center;
 }
-.logo__heading img {
-  width: 190px;
+.heading p {
+  margin-bottom: 0;
+}
+.heading__return {
+  display: none;
+  font-size: 25px;
+  position: absolute;
+  left: 25px;
+}
+.heading__logo {
+  width: 240px;
 }
 
 .mainFooter {
@@ -16,8 +25,8 @@
   color: white;
   padding: 15px 0 20px 25px;
 }
-.mainFooter p img {
-  width: 100px;
+.mainFooter p {
+  font-family: Shrikhand, sans-serif;
   color: white;
 }
 .mainFooter ul {
@@ -27,6 +36,10 @@
 }
 .mainFooter ul li {
   font-weight: bold;
+}
+.mainFooter ul a {
+  text-decoration: none;
+  color: white;
 }
 
 main {

@@ -1,7 +1,16 @@
-.logo__heading{
-    border: 1px solid transparent;
-    text-align: center;
-    img{
-        width: 190px;
+.heading{
+    display: flex;
+    justify-content: center;
+    & p{
+        margin-bottom: 0;
+    }
+    &__return{
+        display: none;
+        font-size: 25px;
+        position: absolute;
+        left: 25px;
+}
+    &__logo{
+        width: 240px;
     }
 }
