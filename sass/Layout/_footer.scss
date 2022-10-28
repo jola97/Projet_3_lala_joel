@@ -1,10 +1,16 @@
 .mainFooter{
-    background: purple;
+    background-color: #606060;
+    color: #ffff;
+    padding: 15px 0 20px 25px;
+    
     p img{
         width: 100px;
+        color: #ffff;
     }
     ul{
         list-style-type: none;
+        padding-left: 0;
+        line-height: 1.5;
         li{
             font-weight: bold;
         }
