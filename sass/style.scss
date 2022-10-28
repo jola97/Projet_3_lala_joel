@@ -3,15 +3,9 @@
 @import "./Utils/mixins";
 @import "./Base/polices";
 @import "./Base/norme";
+@import "./Layout/header";
 @import "./Layout/footer";
 
-.logo__heading{
-    border: 1px solid transparent;
-    text-align: center;
-    img{
-        width: 190px;
-    }
-}
 
 main{
     text-align: center;
@@ -61,14 +55,18 @@ main{
         padding: 8px 12px 8px 12px;
         background-color: $color-primary;
         color: #ffff;  
-        position: absolute;
-        left: 33px;
-        
+        position: relative; 
+        margin-left: -16px;      
     }
 
     &__ico{
         color: #A4A4A4;
         margin-right: 20px;
+        margin-left: 60px;
+        font-size: 20px;
+        &.fa-mobile-screen-button{
+            margin-right: 25px;
+        }
     }
 
     li {
@@ -77,7 +75,8 @@ main{
         background-color: #fafafa;
         border-radius: 10px;
         margin-bottom: 30px;
-        padding: 25px 20px 25px 20px;
+        display: flex;
+        padding: 25px 20px 25px 0;
         width: 95%;
         box-shadow: 0px 5px 10px #bdbdbd;
         &:hover{

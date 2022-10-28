@@ -3,6 +3,14 @@
   box-sizing: border-box; /*définit la façon dont la hauteur et la largeur totale d'un élément est calculé*/
 }
 
+.logo__heading {
+  border: 1px solid transparent;
+  text-align: center;
+}
+.logo__heading img {
+  width: 190px;
+}
+
 .mainFooter {
   background-color: #606060;
   color: white;
@@ -19,14 +27,6 @@
 }
 .mainFooter ul li {
   font-weight: bold;
-}
-
-.logo__heading {
-  border: 1px solid transparent;
-  text-align: center;
-}
-.logo__heading img {
-  width: 190px;
 }
 
 main {
@@ -86,12 +86,17 @@ main {
   padding: 8px 12px 8px 12px;
   background-color: #9356DC;
   color: white;
-  position: absolute;
-  left: 33px;
+  position: relative;
+  margin-left: -16px;
 }
 .fonctionnement__ico {
   color: #A4A4A4;
   margin-right: 20px;
+  margin-left: 60px;
+  font-size: 20px;
+}
+.fonctionnement__ico.fa-mobile-screen-button {
+  margin-right: 25px;
 }
 .fonctionnement li {
   list-style-type: none;
@@ -99,7 +104,8 @@ main {
   background-color: #fafafa;
   border-radius: 10px;
   margin-bottom: 30px;
-  padding: 25px 20px 25px 20px;
+  display: flex;
+  padding: 25px 20px 25px 0;
   width: 95%;
   box-shadow: 0px 5px 10px #bdbdbd;
 }
