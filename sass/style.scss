@@ -10,11 +10,14 @@
 main{
     text-align: center;
     width: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 
 .location{
     background-color: #f2f2f2;
     padding: 15px 0 15px 0 ;
+    font-weight: 600;
+    color: #424949;
     margin-bottom: 0;
     box-shadow: inset 0 24px 8px -23px #bdbdbd;
     i{
@@ -33,6 +36,8 @@ main{
     color: #ffff;
     background: linear-gradient(to top, $color-primary, $color-secondary);
     box-shadow: 0 5px 8px 1px #bdbdbd;
+    font-family: 'Roboto', sans-serif;
+
     }
    /* @include desktop{
         background-color: blue;
@@ -44,6 +49,7 @@ main{
 }
 
 .fonctionnement {
+    margin-top: 45px;
     margin-bottom: 70px;
     &__title{
         text-align: left;
@@ -62,7 +68,7 @@ main{
     &__ico{
         color: #A4A4A4;
         margin-right: 20px;
-        margin-left: 60px;
+        margin-left: 30px;
         font-size: 20px;
         &.fa-mobile-screen-button{
             margin-right: 25px;
@@ -73,9 +79,9 @@ main{
         list-style-type: none ;
         border : 1px solid transparent;
         background-color: #fafafa;
-        border-radius: 10px;
+        border-radius: 20px;
         margin-bottom: 30px;
-        /*display: flex; */
+        font-weight: 600;
         text-align: left;
         padding: 25px 20px 25px 0;
         width: 95%;
@@ -121,9 +127,10 @@ main{
             color: #077754;
             width: 79px;
             height: 24px;
-            padding: 15px 10px 15px 10px;
+            padding: 15px 10px 15px 8px;
             position: absolute;
             right: 45px;
+            font-weight: 600;
         }
         &__img{
             width: 100%;
@@ -142,7 +149,7 @@ main{
             flex-direction: row;
             text-align: left;
             line-height: .5;
-            padding: 0 30px 25px 19px;
+            padding: 0 30px 15px 19px;
             box-shadow: 0px 1px 17px #bdbdbd;
 
             &__ico{
