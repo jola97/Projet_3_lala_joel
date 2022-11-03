@@ -4,12 +4,22 @@
     & p{
         margin-bottom: 0;
     }
-    &__return{
+    &__return__hide{
         display: none;
         font-size: 25px;
         position: absolute;
         left: 25px;
-}
+    }
+    &__return__show{
+        display: block;
+        font-size: 25px;
+        position: absolute;
+        left: 25px;
+        a{
+            color: black;
+        }
+        
+    }
     &__logo{
         width: 240px;
     }
