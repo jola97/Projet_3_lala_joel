@@ -120,6 +120,10 @@ main{
         margin-left: 25px;
         margin-right: 25px;
         line-height: 0;
+        & a{
+            text-decoration: none;
+            color: #000000;
+            }        
         &__label{
             border: 1px solid transparent;
             border-radius: 3px 3px;
@@ -201,6 +205,14 @@ main{
             margin-left: -15px;
             i{
                 font-size: 28px;
+                    &:hover{
+                        cursor: pointer;
+                        font-weight: 900;
+                        background: linear-gradient(to top, $color-secondary, $color-primary);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        color: transparent;
+                    }
             }
         }
     }
@@ -215,8 +227,11 @@ main{
             font-weight: normal;
             font-size: 20px;
             padding-bottom: 5px;
-            border-bottom: 3px solid $color-tertiary;
             width: 50px;
+            span::after{
+                content:"<font-awesome-icon icon="fa-solid fa-minus" />";
+                color: $color-tertiary;
+            }
         }
 
         &__choice{
