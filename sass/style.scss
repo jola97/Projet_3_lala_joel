@@ -228,12 +228,20 @@ main{
             font-size: 20px;
             padding-bottom: 5px;
             width: 50px;
-            span::after{
-                content:"<font-awesome-icon icon="fa-solid fa-minus" />";
-                color: $color-tertiary;
-            }
+            position: relative;
+            margin-bottom: 30px;     
+            &::after{
+                content: '';
+                position: absolute;
+                width: 50px;
+                height: 5px; 
+                background-color: $color-tertiary;
+                margin-top: 8px    
+            }        
         }
 
+
+        
         &__choice{
             border: 1px solid transparent;
             border-radius: 10px 10px;

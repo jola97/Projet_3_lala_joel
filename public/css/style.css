@@ -265,10 +265,16 @@ main {
   font-size: 20px;
   padding-bottom: 5px;
   width: 50px;
+  position: relative;
+  margin-bottom: 30px;
 }
-.menu__entree__plats__desserts h2 span::after {
-  content: "<font-awesome-icon icon=" fa-solid fa-minus " />";
-  color: #99E2D0;
+.menu__entree__plats__desserts h2::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 5px;
+  background-color: #99E2D0;
+  margin-top: 8px;
 }
 .menu__entree__plats__desserts__choice {
   border: 1px solid transparent;
