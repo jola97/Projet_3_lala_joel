@@ -92,6 +92,11 @@ main {
   box-shadow: 0 5px 8px 1px #bdbdbd;
   font-family: "Roboto", sans-serif;
 }
+.reserve__btn:hover {
+  box-shadow: 0 6px 9px 3px #bdbdbd;
+  transition: box-shadow 0.3s ease-in-out;
+  filter: brightness(1.1);
+}
 
 .fonctionnement {
   margin-top: 45px;

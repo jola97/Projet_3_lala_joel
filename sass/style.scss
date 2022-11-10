@@ -37,6 +37,13 @@ main{
     background: linear-gradient(to top, $color-primary, $color-secondary);
     box-shadow: 0 5px 8px 1px #bdbdbd;
     font-family: 'Roboto', sans-serif;
+    
+    &:hover{
+        box-shadow: 0 6px 9px 3px #bdbdbd;
+        transition: box-shadow 0.3s ease-in-out;
+        filter: brightness(1.1); 
+        
+    }
 
     }
    /* @include desktop{
