@@ -156,32 +156,42 @@ main {
 .testMenu {
   display: flex;
   line-height: 0.5;
-  text-overflow: ellipsis;
   align-items: flex-end;
+  background-color: white;
+  box-shadow: 1px 1px 6px #bdbdbd;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
   width: 100%;
-  transform-origin: 0% 100%;
-  transition: transform 500ms ease;
 }
 .testMenu:hover {
-  transform: scaleX(0.8);
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
   text-overflow: ellipsis;
+}
+.testMenu:hover i {
+  background-color: #99E2D0;
+  margin-right: 30px;
+  overflow: visible;
+  padding: 21px;
+  color: white;
+  font-weight: 600;
 }
 
 .testMenu2 {
   width: 75%;
+  padding-left: 12px;
 }
 
 .testMenu3 {
   width: 25%;
+  text-align: center;
+  font-weight: bold;
 }
 
 .testI {
   align-self: center;
-  width: 50px;
   background: #99E2D0;
   font-size: 30px;
+  margin-right: -30px;
 }
 
 .restaurants {
