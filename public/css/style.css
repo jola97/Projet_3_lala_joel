@@ -153,6 +153,37 @@ main {
   color: #9356DC;
 }
 
+.testMenu {
+  display: flex;
+  line-height: 0.5;
+  text-overflow: ellipsis;
+  align-items: flex-end;
+  width: 100%;
+  transform-origin: 0% 100%;
+  transition: transform 500ms ease;
+}
+.testMenu:hover {
+  transform: scaleX(0.8);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  text-overflow: ellipsis;
+}
+
+.testMenu2 {
+  width: 75%;
+}
+
+.testMenu3 {
+  width: 25%;
+}
+
+.testI {
+  align-self: center;
+  width: 50px;
+  background: #99E2D0;
+  font-size: 30px;
+}
+
 .restaurants {
   background-color: #fafafa;
   padding-top: 32px;
