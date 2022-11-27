@@ -55,6 +55,24 @@
   color: white;
 }
 
+.loader {
+  z-index: 1;
+  inset: 0;
+  position: fixed;
+  height: 100vh;
+  background-color: #fbfcfc;
+  opacity: 0.9;
+  animation: stop 2s forwards 3s;
+}
+
+@keyframes stop {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
 main {
   text-align: center;
   width: 100%;
@@ -77,11 +95,11 @@ main {
   background-color: #fafafa;
   padding: 15px 15px 40px 15px;
   /* @include desktop{
-       background-color: blue;
-       &__btn{
-           padding: 5px;
-       }
-   }*/
+        background-color: blue;
+        &__btn{
+            padding: 5px;
+        }
+    }*/
 }
 .reserve__btn {
   border-radius: 30px 30px;
@@ -102,16 +120,16 @@ main {
   margin-top: 45px;
   margin-bottom: 70px;
   /* @include tablet{
-       &__title{
-           text-align: center;
-       }
-       li{
-           width: 50%;
-           &:hover{
-               color: yellow;
-           }
-       }
-   }*/
+            &__title{
+                text-align: center;
+            }
+            li{
+                width: 50%;
+                &:hover{
+                    color: yellow;
+                }
+            }
+        }*/
 }
 .fonctionnement__title {
   text-align: left;
@@ -126,7 +144,7 @@ main {
   margin-left: -16px;
 }
 .fonctionnement__ico {
-  color: #A4A4A4;
+  color: #a4a4a4;
   margin-right: 20px;
   margin-left: 30px;
   font-size: 20px;
@@ -147,7 +165,7 @@ main {
   box-shadow: 0px 5px 10px #bdbdbd;
 }
 .fonctionnement li:hover {
-  background-color: #F8EFFB;
+  background-color: #f8effb;
 }
 .fonctionnement li:hover .fonctionnement__ico {
   color: #9356DC;
@@ -164,16 +182,32 @@ main {
   overflow: hidden;
   width: 100%;
 }
-.testMenu:hover {
+.testMenu .testMenu2 {
+  width: 80%;
   text-overflow: ellipsis;
+  flex: none;
+  transition: width 1s ease;
 }
-.testMenu:hover i {
+.testMenu .testMenu3 {
+  width: 20%;
+  flex: none;
+}
+.testMenu .testI {
+  width: 72px;
   background-color: #99E2D0;
-  margin-right: 30px;
-  overflow: visible;
   padding: 21px;
   color: white;
   font-weight: 600;
+}
+.testMenu .testI i {
+  transform: rotate(1turn);
+  transition: transform 1s ease;
+}
+.testMenu:hover .testMenu2 {
+  width: calc(80% - 72px);
+}
+.testMenu:hover .testI i {
+  transform: rotate(0);
 }
 
 .testMenu2 {
