@@ -171,7 +171,7 @@ main {
   color: #9356DC;
 }
 
-.testMenu {
+.menu__entree__plats__desserts__box {
   display: flex;
   line-height: 0.5;
   align-items: flex-end;
@@ -182,50 +182,37 @@ main {
   overflow: hidden;
   width: 100%;
 }
-.testMenu .testMenu2 {
+.menu__entree__plats__desserts__box .menu__entree__plats__desserts__box__names {
   width: 80%;
   text-overflow: ellipsis;
+  padding-left: 12px;
   flex: none;
-  transition: width 1s ease;
+  transition: width 400ms ease;
 }
-.testMenu .testMenu3 {
+.menu__entree__plats__desserts__box .menu__entree__plats__desserts__box__prices {
   width: 20%;
   flex: none;
+  text-align: center;
+  font-weight: bold;
 }
-.testMenu .testI {
+.menu__entree__plats__desserts__box .menu__entree__plats__desserts__box__checkbox {
   width: 72px;
   background-color: #99E2D0;
+  font-size: 30px;
   padding: 21px;
   color: white;
   font-weight: 600;
 }
-.testMenu .testI i {
-  transform: rotate(1turn);
-  transition: transform 1s ease;
+.menu__entree__plats__desserts__box .menu__entree__plats__desserts__box__checkbox i {
+  transform: rotate(-1turn);
+  transition: transform 500ms ease;
+  font-weight: 600;
 }
-.testMenu:hover .testMenu2 {
+.menu__entree__plats__desserts__box:hover .menu__entree__plats__desserts__box__names {
   width: calc(80% - 72px);
 }
-.testMenu:hover .testI i {
+.menu__entree__plats__desserts__box:hover .menu__entree__plats__desserts__box__checkbox i {
   transform: rotate(0);
-}
-
-.testMenu2 {
-  width: 75%;
-  padding-left: 12px;
-}
-
-.testMenu3 {
-  width: 25%;
-  text-align: center;
-  font-weight: bold;
-}
-
-.testI {
-  align-self: center;
-  background: #99E2D0;
-  font-size: 30px;
-  margin-right: -30px;
 }
 
 .restaurants {
@@ -345,39 +332,15 @@ main {
   }
 }
 /*Slide*/
-#slideMenuEntrees1 {
+#slideMenuEntrees {
   animation: slideMenu 1000ms;
 }
 
-#slideMenuEntrees2 {
+#slideMenuPlats {
   animation: slideMenu 2000ms;
 }
 
-#slideMenuEntrees3 {
-  animation: slideMenu 3000ms;
-}
-
-#slideMenuPlats1 {
-  animation: slideMenu 1000ms;
-}
-
-#slideMenuPlats2 {
-  animation: slideMenu 2000ms;
-}
-
-#slideMenuPlats3 {
-  animation: slideMenu 3000ms;
-}
-
-#slideMenuDesserts1 {
-  animation: slideMenu 1000ms;
-}
-
-#slideMenuDesserts2 {
-  animation: slideMenu 2000ms;
-}
-
-#slideMenuDesserts3 {
+#slideMenuDesserts {
   animation: slideMenu 3000ms;
 }
 
