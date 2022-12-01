@@ -6,6 +6,7 @@
 .heading {
   display: flex;
   justify-content: center;
+  min-width: 517px;
 }
 .heading p {
   margin-bottom: 0;
@@ -33,6 +34,7 @@
   background-color: #424949;
   color: white;
   padding: 15px 0 20px 25px;
+  min-width: 517px;
 }
 .mainFooter p {
   font-family: "Shrikhand", sans-serif;
@@ -59,10 +61,20 @@
   z-index: 1;
   inset: 0;
   position: fixed;
-  height: 100vh;
   background-color: #fbfcfc;
   opacity: 0.9;
-  animation: stop 2s forwards 3s;
+  animation: stop 2s forwards 2s;
+  display: grid;
+  place-items: center;
+}
+.loader::after {
+  content: "";
+  border: 5px solid #99E2D0;
+  border-top: 5px solid #9356DC;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  animation: spin 3s;
 }
 
 @keyframes stop {
@@ -73,10 +85,19 @@
     transform: scale(0);
   }
 }
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
 main {
   text-align: center;
   width: 100%;
   font-family: "Roboto", sans-serif;
+  min-width: 517px;
 }
 
 .location {
@@ -184,10 +205,14 @@ main {
 }
 .menu__entree__plats__desserts__box .menu__entree__plats__desserts__box__names {
   width: 80%;
-  text-overflow: ellipsis;
   padding-left: 12px;
   flex: none;
   transition: width 400ms ease;
+}
+.menu__entree__plats__desserts__box .menu__entree__plats__desserts__box__names h3, .menu__entree__plats__desserts__box .menu__entree__plats__desserts__box__names p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 81%;
 }
 .menu__entree__plats__desserts__box .menu__entree__plats__desserts__box__prices {
   width: 20%;
@@ -281,6 +306,7 @@ main {
 .main__menu {
   display: flex;
   flex-direction: column;
+  min-width: 517px;
 }
 
 .img__top {

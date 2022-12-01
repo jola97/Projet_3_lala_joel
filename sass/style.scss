@@ -10,10 +10,20 @@
   z-index: 1;
   inset: 0;
   position: fixed;
-  height: 100vh;
   background-color: #fbfcfc;
   opacity: 0.9;
-  animation: stop 2s forwards 3s;
+  animation: stop 2s forwards 2s;
+  display: grid;
+  place-items: center;
+  &::after{
+    content: "";
+    border: 5px solid $color-tertiary;
+    border-top: 5px solid $color-primary;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    animation: spin 3s;
+  }
 }
 
 @keyframes stop {
@@ -25,10 +35,20 @@
   }
 }
 
+@keyframes spin{
+  from{
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(1turn);
+  }
+}
+
 main {
   text-align: center;
   width: 100%;
   font-family: "Roboto", sans-serif;
+  min-width: 517px;
 }
 
 .location {
@@ -146,10 +166,15 @@ main {
 
   .menu__entree__plats__desserts__box__names {
     width: 80%;
-    text-overflow: ellipsis;
     padding-left: 12px;
     flex: none;
     transition: width 400ms ease;
+    h3, p{
+      text-overflow: ellipsis;
+      //overflow-x: hidden;
+      white-space: nowrap;
+      width: 81%;
+    }
   }
   .menu__entree__plats__desserts__box__prices {
     width: 20%;
@@ -248,6 +273,7 @@ main {
 .main__menu {
   display: flex;
   flex-direction: column;
+  min-width: 517px;
 }
 
 .img__top {
