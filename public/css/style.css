@@ -6,7 +6,6 @@
 .heading {
   display: flex;
   justify-content: center;
-  min-width: 517px;
 }
 .heading p {
   margin-bottom: 0;
@@ -34,7 +33,6 @@
   background-color: #424949;
   color: white;
   padding: 15px 0 20px 25px;
-  min-width: 517px;
 }
 .mainFooter p {
   font-family: "Shrikhand", sans-serif;
@@ -97,7 +95,6 @@ main {
   text-align: center;
   width: 100%;
   font-family: "Roboto", sans-serif;
-  min-width: 517px;
 }
 
 .location {
@@ -194,7 +191,6 @@ main {
 
 .menu__entree__plats__desserts__box {
   display: flex;
-  line-height: 0.5;
   align-items: flex-end;
   background-color: white;
   box-shadow: 1px 1px 6px #bdbdbd;
@@ -208,11 +204,14 @@ main {
   padding-left: 12px;
   flex: none;
   transition: width 400ms ease;
+  align-self: center;
 }
 .menu__entree__plats__desserts__box .menu__entree__plats__desserts__box__names h3, .menu__entree__plats__desserts__box .menu__entree__plats__desserts__box__names p {
   text-overflow: ellipsis;
+  overflow: hidden;
   white-space: nowrap;
   width: 81%;
+  margin: 5px 0;
 }
 .menu__entree__plats__desserts__box .menu__entree__plats__desserts__box__prices {
   width: 20%;

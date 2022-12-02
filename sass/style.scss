@@ -48,7 +48,6 @@ main {
   text-align: center;
   width: 100%;
   font-family: "Roboto", sans-serif;
-  min-width: 517px;
 }
 
 .location {
@@ -155,7 +154,7 @@ main {
 
 .menu__entree__plats__desserts__box {
   display: flex;
-  line-height: 0.5;
+  //line-height: 0.5;
   align-items: flex-end;
   background-color: #ffff;
   box-shadow: 1px 1px 6px #bdbdbd;
@@ -169,11 +168,13 @@ main {
     padding-left: 12px;
     flex: none;
     transition: width 400ms ease;
+    align-self: center;
     h3, p{
       text-overflow: ellipsis;
-      //overflow-x: hidden;
+      overflow: hidden;
       white-space: nowrap;
       width: 81%;
+      margin: 5px 0;
     }
   }
   .menu__entree__plats__desserts__box__prices {
