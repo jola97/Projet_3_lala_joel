@@ -138,71 +138,22 @@ main {
       }
     }
   }
-  /* @include tablet{
-            &__title{
-                text-align: center;
-            }
-            li{
-                width: 50%;
-                &:hover{
-                    color: yellow;
-                }
-            }
-        }*/
-}
-
-
-.menu__entree__plats__desserts__box {
-  display: flex;
-  //line-height: 0.5;
-  align-items: flex-end;
-  background-color: #ffff;
-  box-shadow: 1px 1px 6px #bdbdbd;
-  border-radius: 10px;
-  margin-bottom: 15px;
-  overflow: hidden;
-  width: 100%;
-
-  .menu__entree__plats__desserts__box__names {
-    width: 80%;
-    padding-left: 12px;
-    flex: none;
-    transition: width 400ms ease;
-    align-self: center;
-    h3, p{
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-      width: 81%;
-      margin: 5px 0;
+  
+  @include desktop{
+    margin-bottom: 45px;
+    &__title{
+      text-align: center;
+      margin-left: unset;
     }
-  }
-  .menu__entree__plats__desserts__box__prices {
-    width: 20%;
-    flex: none;
-    text-align: center;
-    font-weight: bold;
-  }
-  .menu__entree__plats__desserts__box__checkbox {
-    width: 72px;
-    background-color: $color-tertiary;
-    font-size: 30px;
-    padding: 21px;
-    color: white;
-    font-weight: 600;
-    
-    i{
-        transform: rotate(-1turn);
-        transition: transform 500ms ease;
-        font-weight: 600;
+    ul{
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-around;
+      li{
+        width: 25%;
+        text-align: center;
+      }
     }
-   
-  }
-    &:hover .menu__entree__plats__desserts__box__names {
-        width: calc(80% - 72px);
-  }
-    &:hover .menu__entree__plats__desserts__box__checkbox i{
-        transform: rotate(0);
   }
 }
 
@@ -231,8 +182,9 @@ main {
       width: 79px;
       height: 24px;
       padding: 15px 10px 15px 8px;
-      position: absolute;
-      right: 45px;
+      position: relative;
+      left: 340px;
+      top: 60px;
       font-weight: 600;
     }
     &__img {
@@ -268,13 +220,33 @@ main {
       }
     }
   }
+
+  @include desktop{
+    &__title{
+      text-align: center;
+    }
+    &__cases{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    &__box{
+      min-width: 31%;
+      margin-top: unset;
+    }
+    &__label{
+      position: absolute;
+     left: 479px;
+     top: 60px;
+    }
+  }
 }
 
 /***Menus***/
+
 .main__menu {
   display: flex;
   flex-direction: column;
-  min-width: 517px;
 }
 
 .img__top {
@@ -282,7 +254,12 @@ main {
   height: 300px;
   object-fit: cover;
   object-position: center;
+  @include desktop{
+    height: 400px;
+    object-position: 50% 64%;
+  }
 }
+
 
 .menu {
   padding-top: 20px;
@@ -304,6 +281,9 @@ main {
     margin-left: -15px;
     i {
       font-size: 28px;
+      @include desktop{
+        margin-left: 20px;
+        }
       &:hover {
         cursor: pointer;
         font-weight: 900;
@@ -311,8 +291,13 @@ main {
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
+
       }
     }
+      @include desktop{
+        justify-content: center;
+        align-items: center;
+      }
   }
 }
 
@@ -330,16 +315,27 @@ main {
 /*Slide*/
 #slideMenuEntrees {
   animation: slideMenu 1000ms;
+  @include desktop{
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 #slideMenuPlats {
   animation: slideMenu 2000ms;
+  @include desktop{
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 #slideMenuDesserts {
   animation: slideMenu 3000ms;
+  @include desktop{
+    display: flex;
+    justify-content: space-between;
+  }
 }
-
 
 .menu__entree__plats__desserts {
   text-align: left;
@@ -389,7 +385,6 @@ main {
   }
 
   &__checkbox {
-    //border: 0 solid $color-tertiary;
     border-radius: 10px 10px;
     background-color: $color-tertiary;
     position: relative;
@@ -404,6 +399,62 @@ main {
       font-weight: 600;
       transform: rotate(-1turn);
     }
+  }
+}
+
+.menu__entree__plats__desserts__box {
+  display: flex;
+  align-items: flex-end;
+  background-color: #ffff;
+  box-shadow: 1px 1px 6px #bdbdbd;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  width: 100%;
+  @include desktop{
+    width: 32%;
+  }
+
+  .menu__entree__plats__desserts__box__names {
+    width: 80%;
+    padding-left: 12px;
+    flex: none;
+    transition: width 400ms ease;
+    align-self: center;
+    h3, p{
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 81%;
+      margin: 5px 0;
+    }
+  }
+  .menu__entree__plats__desserts__box__prices {
+    width: 20%;
+    flex: none;
+    text-align: center;
+    font-weight: bold;
+  }
+  .menu__entree__plats__desserts__box__checkbox {
+    width: 72px;
+    background-color: $color-tertiary;
+    font-size: 30px;
+    padding: 21px;
+    color: white;
+    font-weight: 600;
+    
+    i{
+        transform: rotate(-1turn);
+        transition: transform 500ms ease;
+        font-weight: 600;
+    }
+   
+  }
+    &:hover .menu__entree__plats__desserts__box__names {
+        width: calc(80% - 72px);
+  }
+    &:hover .menu__entree__plats__desserts__box__checkbox i{
+        transform: rotate(0);
   }
 }
 

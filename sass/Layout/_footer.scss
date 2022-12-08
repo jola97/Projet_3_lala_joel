@@ -1,3 +1,5 @@
+@import "../Utils/mixins";
+
 .mainFooter{
     background-color: #424949;
     color: #ffff;
@@ -28,5 +30,8 @@
             text-decoration: none;
             color: #ffff;
         }
+    }
+    @include desktop{
+        text-align: center;     
     }
 }

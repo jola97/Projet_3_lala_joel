@@ -54,6 +54,11 @@
   text-decoration: none;
   color: white;
 }
+@media (min-width: 1024px) {
+  .mainFooter {
+    text-align: center;
+  }
+}
 
 .loader {
   z-index: 1;
@@ -137,17 +142,6 @@ main {
 .fonctionnement {
   margin-top: 45px;
   margin-bottom: 70px;
-  /* @include tablet{
-            &__title{
-                text-align: center;
-            }
-            li{
-                width: 50%;
-                &:hover{
-                    color: yellow;
-                }
-            }
-        }*/
 }
 .fonctionnement__title {
   text-align: left;
@@ -188,55 +182,23 @@ main {
 .fonctionnement li:hover .fonctionnement__ico {
   color: #9356DC;
 }
-
-.menu__entree__plats__desserts__box {
-  display: flex;
-  align-items: flex-end;
-  background-color: white;
-  box-shadow: 1px 1px 6px #bdbdbd;
-  border-radius: 10px;
-  margin-bottom: 15px;
-  overflow: hidden;
-  width: 100%;
-}
-.menu__entree__plats__desserts__box .menu__entree__plats__desserts__box__names {
-  width: 80%;
-  padding-left: 12px;
-  flex: none;
-  transition: width 400ms ease;
-  align-self: center;
-}
-.menu__entree__plats__desserts__box .menu__entree__plats__desserts__box__names h3, .menu__entree__plats__desserts__box .menu__entree__plats__desserts__box__names p {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  width: 81%;
-  margin: 5px 0;
-}
-.menu__entree__plats__desserts__box .menu__entree__plats__desserts__box__prices {
-  width: 20%;
-  flex: none;
-  text-align: center;
-  font-weight: bold;
-}
-.menu__entree__plats__desserts__box .menu__entree__plats__desserts__box__checkbox {
-  width: 72px;
-  background-color: #99E2D0;
-  font-size: 30px;
-  padding: 21px;
-  color: white;
-  font-weight: 600;
-}
-.menu__entree__plats__desserts__box .menu__entree__plats__desserts__box__checkbox i {
-  transform: rotate(-1turn);
-  transition: transform 500ms ease;
-  font-weight: 600;
-}
-.menu__entree__plats__desserts__box:hover .menu__entree__plats__desserts__box__names {
-  width: calc(80% - 72px);
-}
-.menu__entree__plats__desserts__box:hover .menu__entree__plats__desserts__box__checkbox i {
-  transform: rotate(0);
+@media (min-width: 1024px) {
+  .fonctionnement {
+    margin-bottom: 45px;
+  }
+  .fonctionnement__title {
+    text-align: center;
+    margin-left: unset;
+  }
+  .fonctionnement ul {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .fonctionnement ul li {
+    width: 25%;
+    text-align: center;
+  }
 }
 
 .restaurants {
@@ -265,8 +227,9 @@ main {
   width: 79px;
   height: 24px;
   padding: 15px 10px 15px 8px;
-  position: absolute;
-  right: 45px;
+  position: relative;
+  left: 340px;
+  top: 60px;
   font-weight: 600;
 }
 .restaurants__box__img {
@@ -300,12 +263,30 @@ main {
   -webkit-background-clip: text;
   color: transparent;
 }
+@media (min-width: 1024px) {
+  .restaurants__title {
+    text-align: center;
+  }
+  .restaurants__cases {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .restaurants__box {
+    min-width: 31%;
+    margin-top: unset;
+  }
+  .restaurants__label {
+    position: absolute;
+    left: 479px;
+    top: 60px;
+  }
+}
 
 /***Menus***/
 .main__menu {
   display: flex;
   flex-direction: column;
-  min-width: 517px;
 }
 
 .img__top {
@@ -313,6 +294,12 @@ main {
   height: 300px;
   object-fit: cover;
   object-position: center;
+}
+@media (min-width: 1024px) {
+  .img__top {
+    height: 400px;
+    object-position: 50% 64%;
+  }
 }
 
 .menu {
@@ -337,6 +324,11 @@ main {
 .menu__title i {
   font-size: 28px;
 }
+@media (min-width: 1024px) {
+  .menu__title i {
+    margin-left: 20px;
+  }
+}
 .menu__title i:hover {
   cursor: pointer;
   font-weight: 900;
@@ -344,6 +336,12 @@ main {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+@media (min-width: 1024px) {
+  .menu__title {
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @keyframes slideMenu {
@@ -360,13 +358,31 @@ main {
 #slideMenuEntrees {
   animation: slideMenu 1000ms;
 }
+@media (min-width: 1024px) {
+  #slideMenuEntrees {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
 #slideMenuPlats {
   animation: slideMenu 2000ms;
 }
+@media (min-width: 1024px) {
+  #slideMenuPlats {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
 #slideMenuDesserts {
   animation: slideMenu 3000ms;
+}
+@media (min-width: 1024px) {
+  #slideMenuDesserts {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .menu__entree__plats__desserts {
@@ -426,6 +442,61 @@ main {
   margin-top: 20px;
   font-weight: 600;
   transform: rotate(-1turn);
+}
+
+.menu__entree__plats__desserts__box {
+  display: flex;
+  align-items: flex-end;
+  background-color: white;
+  box-shadow: 1px 1px 6px #bdbdbd;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .menu__entree__plats__desserts__box {
+    width: 32%;
+  }
+}
+.menu__entree__plats__desserts__box .menu__entree__plats__desserts__box__names {
+  width: 80%;
+  padding-left: 12px;
+  flex: none;
+  transition: width 400ms ease;
+  align-self: center;
+}
+.menu__entree__plats__desserts__box .menu__entree__plats__desserts__box__names h3, .menu__entree__plats__desserts__box .menu__entree__plats__desserts__box__names p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 81%;
+  margin: 5px 0;
+}
+.menu__entree__plats__desserts__box .menu__entree__plats__desserts__box__prices {
+  width: 20%;
+  flex: none;
+  text-align: center;
+  font-weight: bold;
+}
+.menu__entree__plats__desserts__box .menu__entree__plats__desserts__box__checkbox {
+  width: 72px;
+  background-color: #99E2D0;
+  font-size: 30px;
+  padding: 21px;
+  color: white;
+  font-weight: 600;
+}
+.menu__entree__plats__desserts__box .menu__entree__plats__desserts__box__checkbox i {
+  transform: rotate(-1turn);
+  transition: transform 500ms ease;
+  font-weight: 600;
+}
+.menu__entree__plats__desserts__box:hover .menu__entree__plats__desserts__box__names {
+  width: calc(80% - 72px);
+}
+.menu__entree__plats__desserts__box:hover .menu__entree__plats__desserts__box__checkbox i {
+  transform: rotate(0);
 }
 
 .btn__commander {
