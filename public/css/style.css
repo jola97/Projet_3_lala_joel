@@ -59,6 +59,11 @@
     text-align: center;
   }
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .mainFooter {
+    text-align: center;
+  }
+}
 
 .loader {
   z-index: 1;
@@ -152,8 +157,9 @@ main {
   padding: 8px 12px 8px 12px;
   background-color: #9356DC;
   color: white;
-  position: relative;
-  margin-left: -16px;
+  position: absolute;
+  left: -17px;
+  top: 20px;
 }
 .fonctionnement__ico {
   color: #a4a4a4;
@@ -172,6 +178,7 @@ main {
   margin-bottom: 30px;
   font-weight: 600;
   text-align: left;
+  position: relative;
   padding: 25px 20px 25px 0;
   width: 95%;
   box-shadow: 0px 5px 10px #bdbdbd;
@@ -185,6 +192,7 @@ main {
 @media (min-width: 1024px) {
   .fonctionnement {
     margin-bottom: 45px;
+    min-width: 1082px;
   }
   .fonctionnement__title {
     text-align: center;
@@ -192,11 +200,32 @@ main {
   }
   .fonctionnement ul {
     margin-top: 40px;
+    padding-left: 0;
     display: flex;
     justify-content: space-around;
   }
   .fonctionnement ul li {
     width: 25%;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .fonctionnement {
+    margin-bottom: 45px;
+  }
+  .fonctionnement__title {
+    text-align: center;
+    margin-left: unset;
+  }
+  .fonctionnement ul {
+    margin-top: 40px;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .fonctionnement ul li {
+    width: 46%;
     text-align: center;
   }
 }
@@ -214,6 +243,7 @@ main {
   margin-left: 25px;
   margin-right: 25px;
   line-height: 0;
+  position: relative;
 }
 .restaurants__box a {
   text-decoration: none;
@@ -227,9 +257,8 @@ main {
   width: 79px;
   height: 24px;
   padding: 15px 10px 15px 8px;
-  position: relative;
-  left: 340px;
-  top: 60px;
+  position: absolute;
+  right: 25px;
   font-weight: 600;
 }
 .restaurants__box__img {
@@ -266,6 +295,7 @@ main {
 @media (min-width: 1024px) {
   .restaurants__title {
     text-align: center;
+    margin-bottom: 40px;
   }
   .restaurants__cases {
     display: flex;
@@ -276,10 +306,20 @@ main {
     min-width: 31%;
     margin-top: unset;
   }
-  .restaurants__label {
-    position: absolute;
-    left: 479px;
-    top: 60px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .restaurants__title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .restaurants__cases {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .restaurants__box {
+    min-width: 40%;
+    margin-top: unset;
   }
 }
 
