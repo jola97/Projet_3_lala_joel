@@ -6,6 +6,7 @@
 .heading {
   display: flex;
   justify-content: center;
+  position: relative;
 }
 .heading p {
   margin-bottom: 0;
@@ -122,12 +123,6 @@ main {
 .reserve {
   background-color: #fafafa;
   padding: 15px 15px 40px 15px;
-  /* @include desktop{
-        background-color: blue;
-        &__btn{
-            padding: 5px;
-        }
-    }*/
 }
 .reserve__btn {
   border-radius: 30px 30px;
@@ -182,12 +177,21 @@ main {
   padding: 25px 20px 25px 0;
   width: 95%;
   box-shadow: 0px 5px 10px #bdbdbd;
+  max-width: 425px;
 }
 .fonctionnement li:hover {
   background-color: #f8effb;
 }
 .fonctionnement li:hover .fonctionnement__ico {
   color: #9356DC;
+}
+@media (max-width: 500px) {
+  .fonctionnement ul {
+    padding-left: 20px;
+  }
+  .fonctionnement ul li {
+    padding-right: 0;
+  }
 }
 @media (min-width: 1024px) {
   .fonctionnement {
@@ -206,26 +210,6 @@ main {
   }
   .fonctionnement ul li {
     width: 25%;
-    text-align: center;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .fonctionnement {
-    margin-bottom: 45px;
-  }
-  .fonctionnement__title {
-    text-align: center;
-    margin-left: unset;
-  }
-  .fonctionnement ul {
-    margin-top: 40px;
-    padding-left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .fonctionnement ul li {
-    width: 46%;
     text-align: center;
   }
 }
