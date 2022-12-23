@@ -433,8 +433,11 @@ main {
   margin-bottom: 15px;
   overflow: hidden;
   width: 100%;
+  max-width: 600px;
+  
   @include desktop{
     width: 32%;
+    
   }
 
   .menu__entree__plats__desserts__box__names {
@@ -447,7 +450,6 @@ main {
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
-      width: 81%;
       margin: 5px 0;
     }
   }
