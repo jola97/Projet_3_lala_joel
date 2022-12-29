@@ -483,6 +483,9 @@ main {
   .menu__entree__plats__desserts__box {
     width: 32%;
   }
+  .menu__entree__plats__desserts__box.spaces {
+    width: 24%;
+  }
 }
 .menu__entree__plats__desserts__box .menu__entree__plats__desserts__box__names {
   width: 80%;
