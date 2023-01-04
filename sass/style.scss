@@ -122,12 +122,13 @@ main {
     border-radius: 20px;
     margin-bottom: 30px;
     font-weight: 600;
-    text-align: left;
+    text-align: center;
+    font-size: 18px;
     position: relative;
     padding: 25px 20px 25px 0;
     width: 95%;
     box-shadow: 0px 5px 10px #bdbdbd;
-    max-width: 425px;
+    //max-width: 425px;
     &:hover {
       background-color: #f8effb;
       .fonctionnement__ico {
@@ -138,7 +139,7 @@ main {
 
   @media (max-width : 500px) {
   ul{
-    padding-left: 20px;
+    padding-right: 10px;
     li{
          padding-right: 0;
       }
@@ -341,6 +342,13 @@ main {
     display: flex;
     justify-content: space-between;
   }
+
+  @include tablet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+  }
 }
 
 #slideMenuPlats {
@@ -349,6 +357,12 @@ main {
     display: flex;
     justify-content: space-between;
   }
+
+    @include tablet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 #slideMenuDesserts {
@@ -356,6 +370,12 @@ main {
   @include desktop{
     display: flex;
     justify-content: space-between;
+  }
+
+    @include tablet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -433,7 +453,7 @@ main {
   margin-bottom: 15px;
   overflow: hidden;
   width: 100%;
-  max-width: 600px;
+  //max-width: 600px;
   
   @include desktop{
     width: 32%;
@@ -441,6 +461,10 @@ main {
   &.spaces{
       width: 24%;;
     }
+  }
+
+  @include tablet{
+    width: 50%;
   }
 
   .menu__entree__plats__desserts__box__names {
